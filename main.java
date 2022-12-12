@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 
 public class main  {
 
@@ -95,21 +97,17 @@ ImageIcon i = new ImageIcon("bro.png");
         b.setBackground(Color.LIGHT_GRAY);
         b.setBorder(BorderFactory.createEtchedBorder());
         b.addMouseListener(new MouseAdapter() {
-            // @Override
-            // public void mouseClicked(MouseEvent e) {
-            //   if(e.getClickCount() ==10) {
-            //   b.setEnabled(false);
+            @Override
+            public void mouseClicked(MouseEvent e) {
+               if(e.getClickCount() == 10) {
+                   b.setEnabled(false);
 
-            // }
-
-            //}
+               }
+            }
         });
 
 
-
-
-
-    }
+        }
 
 
 
