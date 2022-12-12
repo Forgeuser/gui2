@@ -99,7 +99,7 @@ ImageIcon i = new ImageIcon("bro.png");
         b.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-               if(e.getClickCount() == 10) {
+               if(e.getSource() ==b) {
                    b.setEnabled(false);
 
                }
