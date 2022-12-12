@@ -88,23 +88,18 @@ ImageIcon i = new ImageIcon("bro.png");
         b.setFont(new Font("Cosmic Sans", Font.BOLD, 20));
         b.setIconTextGap(0);
         b.setForeground(Color.BLUE);
-        b.addActionListener(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         b.setBackground(Color.LIGHT_GRAY);
         b.setBorder(BorderFactory.createEtchedBorder());
-        b.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-               if(e.getSource() ==b) {
-                   b.setEnabled(false);
+      b.addMouseListener(new MouseAdapter() {
+          @Override
+          public void mouseClicked(MouseEvent e) {
+              if(e.getClickCount() == 10) {
+                  b.setEnabled(false);
 
-               }
-            }
-        });
+
+              }
+          }
+      });
 
 
         }
