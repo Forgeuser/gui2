@@ -107,7 +107,10 @@ ImageIcon e = new ImageIcon("hehe.png");
       b.addActionListener(new AbstractAction() {
           @Override
           public void actionPerformed(ActionEvent e) {
-              System.out.println("yooo");
+              if(e.getSource() == b) {
+                  System.out.println("yo");
+
+              }
 
           }
       });
