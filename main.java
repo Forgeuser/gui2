@@ -64,6 +64,7 @@ public class main  {
 
 
 ImageIcon i = new ImageIcon("bro.png");
+ImageIcon e = new ImageIcon("hehe.png");
 
 
 
@@ -74,6 +75,8 @@ ImageIcon i = new ImageIcon("bro.png");
         f.add(p2,BorderLayout.EAST);
         f.add(p3,BorderLayout.SOUTH);
         f.add(p4,BorderLayout.WEST);
+        f.setTitle("border's  lol");
+        f.setIconImage(e.getImage());
 
 
 
@@ -81,7 +84,16 @@ ImageIcon i = new ImageIcon("bro.png");
 
         b.setText("yo click me ");
         b.setFocusable(false);
+        b.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() ==b) {
+                    System.out.println("yooo");
+                    b.setEnabled(true);
+                }
 
+            }
+        });
         b.setIcon(i);
         b.setHorizontalTextPosition(JButton.CENTER);
         b.setVerticalTextPosition(JButton.TOP);
