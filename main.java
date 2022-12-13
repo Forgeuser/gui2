@@ -84,16 +84,7 @@ ImageIcon e = new ImageIcon("hehe.png");
 
         b.setText("yo click me ");
         b.setFocusable(false);
-        b.addActionListener(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(e.getSource() ==b) {
-                    System.out.println("yooo");
-                    b.setEnabled(true);
-                }
 
-            }
-        });
         b.setIcon(i);
         b.setHorizontalTextPosition(JButton.CENTER);
         b.setVerticalTextPosition(JButton.TOP);
@@ -110,6 +101,14 @@ ImageIcon e = new ImageIcon("hehe.png");
 
 
               }
+          }
+      });
+
+      b.addActionListener(new AbstractAction() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              System.out.println("yooo");
+
           }
       });
 
